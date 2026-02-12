@@ -1,5 +1,8 @@
 # ISP-Watchdog
 
+![n8n Workflow](workflow.png)
+*My automated monitoring logic in n8n.*
+
 # ISP-Watchdog: Network Packet Loss Monitor
 
 I built this project to gather hard evidence of network instability and packet loss from my ISP. While originally tested on a Vodafone connection, this setup works for any Internet Service Provider.
@@ -41,6 +44,9 @@ I solved this by using **PM2** and a custom `ecosystem.config.js`. This allowed 
 - **Internal Baseline (90 Minutes):** Before monitoring the ISP, I ran a high-resolution test (1-second intervals) between my PC and the router for 90 minutes. With over 5,000 successful pings, 0.0% loss, and an average latency of 0.28 ms, I confirmed that my local hardware (CAT7 cabling and Router) was not the source of the issues.
     
 - **ISP Performance:** The monitor successfully documented external packet loss spikes of up to **10%**, proving the issue was outside my local network.
+
+![ISP Packet Loss Graph](packetloss_graph.png)
+*Visualized data from Google Sheets showing the documented packet loss.*
     
 
 ## Repo Structure:
